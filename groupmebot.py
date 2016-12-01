@@ -23,6 +23,7 @@ def response():
 def temp():
     print (data, len(data), "TEST")
 
+@app.route('/post', methods=["GET","POST"])
 def send_post():
     print("send_post")
     mybot_id = "b3eabaca8f17b655ed331166ba"
