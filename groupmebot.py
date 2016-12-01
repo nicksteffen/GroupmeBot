@@ -30,6 +30,7 @@ def send_post():
     msg = "Hello"
     r = requests.post('https://api.groupme.com/v3/bots/post',data ={
         'bot_id':'mybot_id', 'text':'msg'})
+    return "return"
 
 
 if __name__ == '__main__':
