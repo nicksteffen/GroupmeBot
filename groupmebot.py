@@ -17,7 +17,8 @@ def response():
     print ("response")
     if request.method == 'POST':
         data = request.form
-        return data['text']
+        print( data['text'])
+        return "post"
     else:
         return "not a post request"
 
