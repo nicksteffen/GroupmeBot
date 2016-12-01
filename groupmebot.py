@@ -16,12 +16,13 @@ app= Flask(__name__)
 def response():
     print ("response")
     if request.method == 'POST':
-        data = request.form['text']
         print("post request made")
+        data = request.form['text']
         print(len(data))
-        print( data)
+        print(data)
         return "post"
     else:
+        print "not a post"
         return "not a post request"
 
 def temp():
