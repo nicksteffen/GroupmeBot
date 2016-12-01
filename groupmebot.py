@@ -11,11 +11,11 @@ app= Flask(__name__)
 def hello():
     return "Hello World!"
 
-# def response(self):
-#     if request.method == 'POST':
-#         data = request.form
+def response(self):
+    if request.method == 'POST':
+        data = request.form
 
-#     return data['text']
+    return data['text']
 
 # def send_post(self):
 #     mybot_id= 	b3eabaca8f17b655ed331166ba
