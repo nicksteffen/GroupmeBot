@@ -11,17 +11,17 @@ app= Flask(__name__)
 def hello(self):
     return "Hello World!"
 
-def response(self):
-    if request.method == 'POST':
-        data = request.form
+# def response(self):
+#     if request.method == 'POST':
+#         data = request.form
 
-    return data['text']
+#     return data['text']
 
-def send_post(self):
-    mybot_id= 0
-    msg = "Hello"
-    r = requests.post('https://api.groupme.com/v3/bots/post',data ={
-        'bot_id':'mybot_id', 'text':'msg'})
+# def send_post(self):
+#     mybot_id= 0
+#     msg = "Hello"
+#     r = requests.post('https://api.groupme.com/v3/bots/post',data ={
+#         'bot_id':'mybot_id', 'text':'msg'})
 
 
 if __name__ == '__main__':
