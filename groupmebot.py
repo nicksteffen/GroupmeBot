@@ -17,8 +17,9 @@ def response():
     print ("response")
     if request.method == 'POST':
         data = request.form
-
-    return data
+        return data
+    else:
+        return "not a post request"
 
 def temp():
     print (data, len(data), "TEST")
