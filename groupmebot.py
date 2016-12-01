@@ -17,6 +17,8 @@ def response(self):
 
     return data['text']
 
+def temp():
+    print (data, len(data), "TEST")
 # def send_post(self):
 #     mybot_id= 	b3eabaca8f17b655ed331166ba
 #     msg = "Hello"
