@@ -12,6 +12,7 @@ def hello():
     print ("hello")
     return "Hello World!"
 
+@app.route('/', methods=["GET","POST"])
 def response():
     print ("response")
     if request.method == 'POST':
