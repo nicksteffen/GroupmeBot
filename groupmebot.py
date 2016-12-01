@@ -1,6 +1,5 @@
 import os
-from flask import Flask
-from flask import request
+from flask import Flask, request, json
 import requests
 
 
@@ -17,9 +16,8 @@ def response():
     print ("response")
     if request.method == 'POST':
         print("post request made")
-        data = request.form['text']
-        print(len(data))
-        print(data)
+        data = request.get_json()
+        print(data['text'])
         return "post"
     else:
         print "not a post"
