@@ -6,11 +6,11 @@ import requests
 
 app= Flask(__name__)
 
-@app.route('/', methods=["GET","POST"])
+# @app.route('/', methods=["GET","POST"])
 
-def hello():
-    print ("hello")
-    return "Hello World!"
+# def hello():
+#     print ("hello")
+#     return "Hello World!"
 
 @app.route('/', methods=["GET","POST"])
 def response():
