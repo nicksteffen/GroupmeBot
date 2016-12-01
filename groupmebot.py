@@ -6,9 +6,9 @@ import requests
 
 app= Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=["POST"])
 
-def hello(self):
+def hello():
     return "Hello World!"
 
 # def response(self):
@@ -18,7 +18,7 @@ def hello(self):
 #     return data['text']
 
 # def send_post(self):
-#     mybot_id= 0
+#     mybot_id= 	b3eabaca8f17b655ed331166ba
 #     msg = "Hello"
 #     r = requests.post('https://api.groupme.com/v3/bots/post',data ={
 #         'bot_id':'mybot_id', 'text':'msg'})
