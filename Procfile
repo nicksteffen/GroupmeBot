@@ -1,1 +1,1 @@
-web: python dealscrap/groupmebot.py
+web: python groupmebot.py
