@@ -29,7 +29,7 @@ def send_post():
     mybot_id = "b3eabaca8f17b655ed331166ba"
     msg = "Hello"
     r = requests.post("https://api.groupme.com/v3/bots/post",
-                      data ={'text':'msg', 'bot_id':'mybot_id'})
+                      data ={'text':"HELLO", 'bot_id':	"b3eabaca8f17b655ed331166ba"})
     return r.url
 
 
