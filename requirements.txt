@@ -1,0 +1,5 @@
+Cython==0.25.1
+Django==1.10
+numpy==1.11.2
+requests==2.12.2
+xlwt==1.0.0
