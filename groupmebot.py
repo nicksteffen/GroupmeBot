@@ -17,7 +17,7 @@ def response():
     if request.method == 'POST':
         print("post request made")
         data = request.get_json()
-        print(data['text'])
+        print(data['text'], data['sender_id'], data['name'])
         return "post"
     else:
         print "not a post"
