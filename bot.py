@@ -40,7 +40,7 @@ def send_post(message):
     msg = "Kristin be nice to me"
     data =  {'text':message, 'bot)id':mybot_id}
     #r = requests.post(post_url,json ={'text': message, 'bot_id':mybot_id})
-    request = Request(url, urlencode(data).encode())
+    request = Request(post_url, urlencode(data).encode())
     json = urlopen(request).read.decode()
     print(json)
     return json
