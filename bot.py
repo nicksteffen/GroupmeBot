@@ -19,7 +19,7 @@ def response():
     if request.method == 'POST':
         print("post request made")
         data = request.get_json()
-        message= format_message(data['text'])
+        message= parser.format_message(data['text'])
         if message != False:
             send_post(message)
         print(data['text'], data['sender_id'], data['name'])
