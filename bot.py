@@ -36,9 +36,9 @@ def temp():
 def send_post(message):
     post_url="https://api.groupme.com/v3/bots/post"
     print("send_post")
-    mybot_id = "a618a63dd6defdbe37360bb0"
+    mybot_id = "a618a63dd6defdbe37360bb0fa"
     msg = "Kristin be nice to me"
-    data =  {'text':message, 'bot)id':mybot_id}
+    data =  {'text':message, 'bot_id':mybot_id}
     #r = requests.post(post_url,json ={'text': message, 'bot_id':mybot_id})
     request = Request(post_url, urlencode(data).encode())
     json = urlopen(request).read.decode()
