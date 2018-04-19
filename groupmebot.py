@@ -25,6 +25,7 @@ def response():
         print(data['text'], data['sender_id'], data['name'])
         return "post"
     else:
+        print "not a post"
         return "not a post request"
 
 def temp():
