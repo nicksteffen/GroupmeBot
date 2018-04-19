@@ -1,1 +1,1 @@
-web: python groupmebot.py
+web: python bot.py

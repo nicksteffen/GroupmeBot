@@ -16,9 +16,3 @@ def format_message(phrase):
         return False
     message = word[:1].upper()+word[1:-2]+" her?"
     return message
-
-
-print(format_message("That one hurt the old ticker"))
-print(format_message("That one hurt the old ticker!"))
-print(format_message("That one hurt the old "))
-print(format_message("The kicker word is in the middle this time!"))
