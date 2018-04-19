@@ -2,6 +2,8 @@ import os
 from flask import Flask, request, json
 import requests
 
+import parser
+
 
 app= Flask(__name__)
 
@@ -17,6 +19,9 @@ def response():
     if request.method == 'POST':
         print("post request made")
         data = request.get_json()
+        message= format_message(data['text'])
+        if message != False:
+            send_post(message)
         print(data['text'], data['sender_id'], data['name'])
         return "post"
     else:
@@ -27,12 +32,13 @@ def temp():
     print (data, len(data), "TEST")
 
 @app.route('/post', methods=["GET","POST"])
-def send_post():
+def send_post(message):
+    post_url="https://api.groupme.com/v3/bots/post"
     print("send_post")
-    mybot_id = "b3eabaca8f17b655ed331166ba"
+    mybot_id = "a618a63dd6defdbe37360bb0"
     msg = "Kristin be nice to me"
-    r = requests.post("https://api.groupme.com/v3/bots/post",
-                      data ={'text': msg, 'bot_id':mybot_id})
+    r = requests.post(post_url,
+                      data ={'text': message, 'bot_id':mybot_id})
     return r.url
 
 
