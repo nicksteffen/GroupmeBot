@@ -37,8 +37,7 @@ def send_post(message):
     print("send_post")
     mybot_id = "a618a63dd6defdbe37360bb0"
     msg = "Kristin be nice to me"
-    r = requests.post(post_url,
-                      data ={'text': message, 'bot_id':mybot_id})
+    r = requests.post(post_url,json ={'text': message, 'bot_id':mybot_id})
     return r.url
 
 
