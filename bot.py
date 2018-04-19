@@ -1,7 +1,8 @@
 import os
 from flask import Flask, request, json
 import requests
-
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 import parser
 
 
@@ -37,8 +38,12 @@ def send_post(message):
     print("send_post")
     mybot_id = "a618a63dd6defdbe37360bb0"
     msg = "Kristin be nice to me"
-    r = requests.post(post_url,json ={'text': message, 'bot_id':mybot_id})
-    return r.url
+    data =  {'text':message, 'bot)id':mybot_id}
+    #r = requests.post(post_url,json ={'text': message, 'bot_id':mybot_id})
+    request = Request(url, urlencode(data).encode())
+    json = urlopen(request).read.decode()
+    print(json)
+    return json
 
 
 if __name__ == '__main__':
