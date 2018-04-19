@@ -20,6 +20,9 @@ def response():
     if request.method == 'POST':
         print("post request made")
         data = request.get_json()
+        if data['name'] == "I. Hard Lee Noer":
+            return
+
         message= parser.format_message(data['text'])
         if message != False:
             print(send_post(message))
